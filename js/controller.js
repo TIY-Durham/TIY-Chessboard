@@ -12,9 +12,9 @@
 
   // Controller for "reset move"...
   jQuery('#rewind').on('click', function(){
-    console.log('rewind clicked');
-    var arr = game.reset();
-    orig(arr);
+    console.log('rewind clicked'); // TODO: TRACER BULLET!
+    game.reset(); // TODO: Tell the model to do something it knows how to do...
+    //orig(arr);
 
   });
 
@@ -122,8 +122,6 @@ function backTransform (arr){
 
 
 function orig (arr){
-
-
     $('#D4').removeClass('wpawn');
     $('#D2').addClass('wpawn');
     $('#F6').removeClass('bknight');
