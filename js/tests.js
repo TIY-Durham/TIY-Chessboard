@@ -26,11 +26,13 @@ console.log(game.tracer());
     expect(game.pieceAt(0,0)).to.equal('R');
   });
 
-  it('should be able to move pieces', function () {
-
-    // Pre conditions...
+  it('should move exactly one piece', function () {
+    // Initialize the Environment...
     game.reset(); // Re-initialize the board...
-    var board = game.board();
+
+    var board = game.board(); // Copy the board?
+
+    // Test the Preconditions...
     expect(board[6][3]).to.equal('p');
     expect(board[4][3]).to.be.null;
 
@@ -40,9 +42,9 @@ console.log(game.tracer());
       { rank: 4, file: 3 }  // to
     )).to.equal(undefined);
 
-    // Post conditions...
-    var board = game.board();
+    var board = game.board(); // Re-copy the board?
 
+    // Test the Postconditions...
     chai.expect(board[6][3]).to.be.null;
     chai.expect(board[4][3]).to.be.equal('p');
   });
