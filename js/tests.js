@@ -70,6 +70,51 @@ console.log(game.tracer());
       '|r|n|b|q|k|b|n|r|',
     ].join('\n') + '\n');
 
+  }); // it should move a piece
+
+  it('should be able to move a different piece', function(){
+    // Create the world anew (AKA Initialize Environment)
+    game.reset();
+    var board = game.board();
+
+    function toTracer(rows){
+      return rows.join('\n') + '\n';
+    }
+    // Test the Precondition...
+    chai.expect(game.tracer()).to.equal(toTracer([
+      '|R|N|B|Q|K|B|N|R|',
+      '|P|P|P|P|P|P|P|P|',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '|p|p|p|p|p|p|p|p|',
+      '|r|n|b|q|k|b|n|r|',
+    ]));
+
+    // Notes to self for later...
+    // var secondMove = moves[1] = {
+    //   from: { rank: 0, file: 6 },
+    //   to: { rank: 2, file: 5 }
+    // }
+
+    // Action: applyMove for "Nf6" (Black kNight to f6)
+    expect(game.applyMove(
+      { rank: 0, file: 6 }, // from
+      { rank: 2, file: 5 } // to
+    )).to.be.undefined;
+
+    // Test the Postconditions...
+    chai.expect(game.tracer()).to.equal(toTracer([
+      '|R|N|B|Q|K|B| |R|',
+      '|P|P|P|P|P|P|P|P|',
+      '| | | | | |N| | |',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '|p|p|p|p|p|p|p|p|',
+      '|r|n|b|q|k|b|n|r|',
+    ]));
   });
 
   it.skip('should be able to assign the from piece to null', function() {
