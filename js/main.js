@@ -107,10 +107,10 @@
     tracer: function(){
       var bullet = '';
       //creates a block of statements
-      for ( var rank = 0; rank < board.length; rank++ ){
-        console.log(rank, board[rank]);
-        console.log('tracer function bullet');
-      }
+      // for ( var rank = 0; rank < board.length; rank++ ){
+      //   console.log(rank, board[rank]);
+      //   console.log('tracer function bullet');
+      // }
 
       for ( rank = 0; rank < board.length; rank++ ){
         bullet += '|';
