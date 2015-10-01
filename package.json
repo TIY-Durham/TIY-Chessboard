@@ -1,0 +1,23 @@
+{
+  "name": "tiy-chessboard",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.html",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "start": "browser-sync start --server --startPath index.html --files='index.html,js/*.js,css/*.js",
+    "test": "browser-sync start --server --startPath tests.html --files='tests.html,js/*.js'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karjac14/TIY-Chessboard.git"
+  },
+  "author": "Karlo \"Don't Need No `package.json`\" Elo <karjac14@mail.github.com>",
+  "license": "Beerware",
+  "bugs": {
+    "url": "https://github.com/karjac14/TIY-Chessboard/issues"
+  },
+  "homepage": "https://github.com/karjac14/TIY-Chessboard#readme"
+}
