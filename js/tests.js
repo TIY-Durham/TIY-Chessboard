@@ -36,6 +36,17 @@ console.log(game.tracer());
     expect(board[6][3]).to.equal('p');
     expect(board[4][3]).to.be.null;
 
+    expect(game.tracer()).to.equal([
+      '|R|N|B|Q|K|B|N|R|',
+      '|P|P|P|P|P|P|P|P|',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '|p|p|p|p|p|p|p|p|',
+      '|r|n|b|q|k|b|n|r|',
+    ].join('\n') + '\n');
+
     // Action to change the world...
     expect(game.applyMove(
       { rank: 6, file: 3 }, // from
@@ -47,6 +58,18 @@ console.log(game.tracer());
     // Test the Postconditions...
     chai.expect(board[6][3]).to.be.null;
     chai.expect(board[4][3]).to.be.equal('p');
+
+    expect(game.tracer()).to.equal([
+      '|R|N|B|Q|K|B|N|R|',
+      '|P|P|P|P|P|P|P|P|',
+      '| | | | | | | | |',
+      '| | | | | | | | |',
+      '| | | |p| | | | |',
+      '| | | | | | | | |',
+      '|p|p|p| |p|p|p|p|',
+      '|r|n|b|q|k|b|n|r|',
+    ].join('\n') + '\n');
+
   });
 
   it.skip('should be able to assign the from piece to null', function() {
