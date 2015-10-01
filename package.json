@@ -7,6 +7,7 @@
     "doc": "doc"
   },
   "scripts": {
+    "start": "browser-sync start --server --startPath index.html --files='index.html,js/*.js,css/*.js",
     "test": "browser-sync start --server --startPath tests.html --files='tests.html,js/*.js'"
   },
   "repository": {
