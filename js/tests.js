@@ -1,7 +1,7 @@
 console.log(game.tracer());
 
 (function(globals) {
-
+  var expect = chai.expect;
 
   it('should have a `game` in the `window`', function(){
     chai.expect(window.game).to.be.equal(game);
