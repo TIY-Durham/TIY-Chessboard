@@ -64,10 +64,9 @@
      * @return {Object} the game object for Method Chaining
      */
     reset: function(){
-      console.log ("mainjs reset!");
       board = initial();
-      console.log (board.join ('\n' + '|'));
-      return board;
+
+      return this;
     },
     /**
      * Advance the internal game board to the next move.
