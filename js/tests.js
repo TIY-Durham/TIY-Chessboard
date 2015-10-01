@@ -19,6 +19,12 @@ console.log(game.tracer());
     chai.expect(board[0][0]).to.equal('R');
   });
 
+  it.skip('should tell me what piece is at a position', function(){
+    expect(game.pieceAt(6,3)).to.equal('p');
+    expect(game.pieceAt(6,2)).to.equal('p');
+    expect(game.pieceAt(4,3)).to.be.null;
+    expect(game.pieceAt(0,0)).to.equal('R');
+  });
 
   it('should be able to move pieces', function () {
 
