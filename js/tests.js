@@ -36,12 +36,12 @@ console.log(game.tracer());
     // chai.expect(game.applyMove()).to.deep.equal({rank: 6, file: 3});
   });
 
-  it('should be able to assign the from piece to null', function() {
+  it.skip('should be able to assign the from piece to null', function() {
     chai.expect(game.applyMove()).to.deep.equal(null);
   });
 
 
-  it('should be able to apply the move', function() {
+  it.skip('should be able to apply the move', function() {
     var board = game.board();
     chai.expect(board).to.be.an('array');
     chai.expect(board[6][3]).to.be.a('string');
