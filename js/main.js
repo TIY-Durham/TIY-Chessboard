@@ -107,10 +107,10 @@
     tracer: function(){
       var bullet = '';
       //creates a block of statements
-      for ( var rank = 0; rank < board.length; rank++ ){
-        console.log(rank, board[rank]);
-        console.log('tracer function bullet');
-      }
+      // for ( var rank = 0; rank < board.length; rank++ ){
+      //   console.log(rank, board[rank]);
+      //   console.log('tracer function bullet');
+      // }
 
       for ( rank = 0; rank < board.length; rank++ ){
         bullet += '|';
@@ -130,28 +130,13 @@
      * @param {Object} to with `rank` and `file`
      * @return undefined
      *
-     * @todo Fill me in! .
-     ..and remove this comment.
+     * @todo Fill me in! ...and remove this comment.
      */
-
-
     applyMove: function(from, to){
-
-      moves[0].to = moves[0].from;
-      moves[0].from = null;
-
-        return moves[0].to;
-
-        // board[rank.to][file.to] = board[from.rank][from.file];
-        // board[from.rank][from.file] = null;
-
-        // console.log(moves[0].to);
-      console.log(board.join ('\n' + '|'));
-      return board.join('\n' + '|');
-
-
-
-    }// END applyMove
+      // TODO: Apply the move `from`, `to` to `board`
+      board[4][3] = board[6][3];
+      board[6][3] = null;
+    } // END applyMove
 
   }); // END game
 
