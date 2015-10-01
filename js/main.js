@@ -130,11 +130,8 @@
      * @param {Object} to with `rank` and `file`
      * @return undefined
      *
-     * @todo Fill me in! .
-     ..and remove this comment.
+     * @todo Fill me in! ...and remove this comment.
      */
-
-
     applyMove: function(from, to){
 
       moves[0].to = moves[0].from;
